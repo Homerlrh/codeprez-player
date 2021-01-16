@@ -3,7 +3,7 @@ import TextEditor from "./TextEditor";
 import { ContentContext } from "../context/Provider";
 import Mp3Player from "./Mp3Player";
 
-import db from "./db/example.json";
+import db from "../db/example.json";
 
 export default function Player() {
   //mock data
