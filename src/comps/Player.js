@@ -15,8 +15,15 @@ export default function Player() {
   }
 
   useEffect(()=>{
-    //if(onPlay) 
+    if(onPlay) {
+      const interval = setInterval(() => {
+      setText(handleTextParse(data, (timestamp+1000)));
+      setTimestamp(timestamp+1000);
+    }, 1000);
+    return () => clearInterval(interval);
+    }
   })
+
   return(
     <TextEditor currentText={text} onPlay={onPlay}/>
   )
