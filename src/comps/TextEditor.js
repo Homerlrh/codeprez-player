@@ -33,6 +33,7 @@ export default function TextEditor({currentText, onPlay, onEditing}) {
       <Editor
         height="90vh"
         language="javascript"
+        readOnly={onPlay}
         value={text}
         editorDidMount={handleEditorDidMount}
       />

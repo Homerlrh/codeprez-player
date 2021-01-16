@@ -1,4 +1,4 @@
-import React, {createContext,  useReducer} from "react";
+import React, {createContext, useReducer} from "react";
 import sessionStorageParser from "../helper/sessionStorageParser";
 
 const defaultContent = sessionStorageParser();
