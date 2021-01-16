@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, {useState, useEffect } from "react";
 import Editor from "@monaco-editor/react";
 
 export default function TextEditor({currentText, onPlay, onEditing}) {
@@ -7,8 +7,8 @@ export default function TextEditor({currentText, onPlay, onEditing}) {
   
   useEffect(() => {
     if(onPlay)
-      setText(text);
-  },[text]);
+      setText(currentText);
+  },[currentText]);
 
   function handleEditorDidMount() {
     if(!onPlay)

@@ -1,4 +1,4 @@
-export default function sessionStorageParser(value) {
+export const sessionStorageParser = (value) => {
   if(!value) {
     //writing data to sessionstorage
     const storage = { ... sessionStorage};
