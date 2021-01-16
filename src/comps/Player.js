@@ -24,7 +24,7 @@ export default function Player() {
 		if (onPlay) {
 			const interval = setInterval(() => {
 				const tx = handleTextParse(data, timestamp + 1000);
-				console.log(tx);
+				//console.log(tx);
 				setText(tx);
 				setTimestamp(timestamp + 1000);
 			}, 1000);
@@ -40,7 +40,7 @@ export default function Player() {
 					<TextEditor currentText={text} onPlay={onPlay} />
 				</div>
 				<div style={{ paddingTop: "5%" }}>
-					<Mp3Player />
+					<Mp3Player onPlay={() => setOnPlay(!onPlay)} />
 				</div>
 			</div>
 		</>
