@@ -1,17 +1,14 @@
-import React, {useEffect} from "react";
-
-import { ContentProvider } from "./context/Provider";
-
-import Player from "./comps/Player";
+import "./App.css";
+import Mp3Player from "./comp/Mp3Player";
 
 function App() {
-  const data = JSON.parse(db);
-
-  return (
-    <ContentProvider>
-      <Player />
-    </ContentProvider>
-  );
+	return (
+		<div className="App">
+			<header className="App-header">
+				<Player />
+			</header>
+		</div>
+	);
 }
 
 export default App;

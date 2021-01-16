@@ -4,11 +4,20 @@
   "private": true,
   "dependencies": {
     "@monaco-editor/react": "^3.8.3",
+  "name": "codeprez-player",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-player": "^2.7.2",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
