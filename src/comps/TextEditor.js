@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Editor from "@monaco-editor/react";
 
-export default function TextEditor({ currentText, onPlay, onEditing }) {
+export default function TextEditor({ currentText, lang, onPlay, onEditing }) {
 	const [text, setText] = useState(currentText);
 	const [isEditorReady, setIsEditorReady] = useState(false);
 
@@ -31,7 +31,7 @@ export default function TextEditor({ currentText, onPlay, onEditing }) {
 			<Editor
 				height="90vh"
 				width="100%"
-				language="javascript"
+				language={lang}
 				readOnly={onPlay}
 				value={text}
 				editorDidMount={handleEditorDidMount}

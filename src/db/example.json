@@ -2,15 +2,105 @@
   "extension" : "text/javascript",
   "frameRate" : "500" ,
   "snapshots" : [
-    {"timestamp": "1000", "text": "first second" , "hash" : ""},
-    {"timestamp": "2000", "text": "second second" , "hash" : ""},
-    {"timestamp": "3000", "text": "third second" , "hash" : ""},
-    {"timestamp": "4000", "text": "forth second" , "hash" : ""},
-    {"timestamp": "5000", "text": "fifth second" , "hash" : ""},
-    {"timestamp": "6000", "text": "sixth second" , "hash" : ""},
-    {"timestamp": "7000", "text": "seventh second" , "hash" : ""},
-    {"timestamp": "8000", "text": "eighth second" , "hash" : ""},
-    {"timestamp": "9000", "text": "ninth second" , "hash" : ""},
-    {"timestamp": "10000", "text": "tenth second" , "hash" : ""}
+    {
+      "timestamp": "1000", 
+      "text": "import React from 'react'\n import { View } from 'react-native';\n\nexport default function App() {\nreturn(\n\n);\n}" , 
+      "hash" : ""},
+    {"timestamp": "2000", "text": "" , "hash" : ""},
+    {"timestamp": "3000", "text": "" , "hash" : ""},
+    {"timestamp": "4000", "text": "" , "hash" : ""},
+    {"timestamp": "5000", "text": "" , "hash" : ""},
+    {"timestamp": "6000", "text": "" , "hash" : ""},
+    {"timestamp": "7000", "text": "" , "hash" : ""},
+    {"timestamp": "8000", "text": "" , "hash" : ""},
+    {"timestamp": "9000", "text": "" , "hash" : ""},
+    {
+      "timestamp": "30000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: 'dodgerblue',\n    flex: 1,\n  }}\n>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "56000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: 'dodgerblue',\n    flex: 0.5,\n  }}\n>\n</View>\n\n);\n}", 
+      "hash" : ""},
+    {
+      "timestamp": "71000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: ,\n  }}\n>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "74000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n</View>\n\n);\n}" , 
+      "hash" : ""}, 
+    {
+      "timestamp": "78000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n\n</View>\n\n);\n}" , 
+      "hash" : ""}, 
+    {
+      "timestamp": "80000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<V\n</View>\n\n);\n}" , 
+      "hash" : ""}, 
+    {
+      "timestamp": "81000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View\n</View>\n\n);\n}" , 
+      "hash" : ""}, 
+    {
+      "timestamp": "82000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View></View>\n</View>\n\n);\n}" , 
+      "hash" : ""}, 
+    {
+      "timestamp": "84000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View />\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "90000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "91000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "92000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   bg\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "93000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "94000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:''\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "95000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue'\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "97000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "99000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "127000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "131000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "139000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'gold', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "141000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'gold', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'tomato', \nflex: 1\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""},
+    {
+      "timestamp": "142000", 
+      "text": "import React from 'react'\nimport { View } from 'react-native';\nexport default function App() {\nreturn(\n<View\n  style={{\n    backgroundColor: '#fff',\n    flex: 1,\n  }}\n>\n\n<View style={{\n   backgroundColor:'dodgerblue', \nflex: 2\n}}/>\n<View style={{\n   backgroundColor:'gold', \nflex: 1\n}}/>\n<View style={{\n   backgroundColor:'tomato', \nflex: 1\n}}/>\n</View>\n\n);\n}" , 
+      "hash" : ""}
   ]
 }
