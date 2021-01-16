@@ -6,6 +6,7 @@ export const ContentContext = createContext(defaultContent);
 export const DispatchContent = createContext(null);
 
 export const ContentProvider = ({children}) => {
+  
   const [content, dispatchContent] = useReducer(
     (content, changes) => {
       sessionStorageParser(changes);

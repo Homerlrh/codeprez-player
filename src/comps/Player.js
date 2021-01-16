@@ -2,9 +2,20 @@ import React, {useState, useEffect, useContext} from "react";
 import TextEditor from "./TextEditor";
 import { ContentContext } from "../context/Provider";
 
+import db from "./db/example.json";
+
 export default function Player() {
-  const content = useContext(ContentContext);
+  //mock data
+  const data = JSON.parse(db);
+
+  const defaultContent = {
+    text:"",
+    currentTimestamp: 0,
+    onPlay: false
+  }
   
+  const content = useContext(ContentContext || defaultContent);
+
   const [text, setText] = useState(content.text);
   const [timestamp, setTimestamp] = useState(content.currentTimestamp);
   const [onPlay, setOnPlay] = useState(content.onPlay);
@@ -14,6 +25,7 @@ export default function Player() {
     return currentContent.text;
   }
 
+  
   useEffect(()=>{
     if(onPlay) {
       const interval = setInterval(() => {
