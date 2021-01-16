@@ -1,16 +1,16 @@
 {
   "extension" : "text/javascript",
-  "frameRate" : 500 ,
+  "frameRate" : "500" ,
   "snapshots" : [
-    {"timestamp": 1000, "text": "first second" , "hash" : ""},
-    {"timestamp": 2000, "text": "second second" , "hash" : ""},
-    {"timestamp": 3000, "text": "third second" , "hash" : ""},
-    {"timestamp": 4000, "text": "forth second" , "hash" : ""},
-    {"timestamp": 5000, "text": "fifth second" , "hash" : ""},
-    {"timestamp": 6000, "text": "sixth second" , "hash" : ""},
-    {"timestamp": 7000, "text": "seventh second" , "hash" : ""},
-    {"timestamp": 8000, "text": "eighth second" , "hash" : ""},
-    {"timestamp": 9000, "text": "ninth second" , "hash" : ""},
-    {"timestamp": 10000, "text": "tenth second" , "hash" : ""}
+    {"timestamp": "1000", "text": "first second" , "hash" : ""},
+    {"timestamp": "2000", "text": "second second" , "hash" : ""},
+    {"timestamp": "3000", "text": "third second" , "hash" : ""},
+    {"timestamp": "4000", "text": "forth second" , "hash" : ""},
+    {"timestamp": "5000", "text": "fifth second" , "hash" : ""},
+    {"timestamp": "6000", "text": "sixth second" , "hash" : ""},
+    {"timestamp": "7000", "text": "seventh second" , "hash" : ""},
+    {"timestamp": "8000", "text": "eighth second" , "hash" : ""},
+    {"timestamp": "9000", "text": "ninth second" , "hash" : ""},
+    {"timestamp": "10000", "text": "tenth second" , "hash" : ""}
   ]
 }

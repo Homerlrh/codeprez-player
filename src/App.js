@@ -5,7 +5,7 @@ import { ContentProvider } from "./context/Provider";
 import Player from "./comps/Player";
 
 function App() {
-  const data = JSON.parse(db);
+  //const data = JSON.parse(db);
 
   return (
     <ContentProvider>

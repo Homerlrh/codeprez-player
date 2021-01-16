@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import TextEditor from "./TextEditor";
 import { ContentContext } from "../context/Provider";
 
-import db from "./db/example.json";
+import db from "../db/example.json";
 
 export default function Player() {
   //mock data
