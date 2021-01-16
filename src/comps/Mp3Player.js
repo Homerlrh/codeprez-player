@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/fontawesome-free-solid";
-export default function Mp3Player() {
+export default function Mp3Player({ onPlay }) {
 	const hiddenInput = useRef();
 
 	const [audio, setAudio] = useState(null);
@@ -20,6 +20,8 @@ export default function Mp3Player() {
 					controls={true}
 					height="50px"
 					width="500px"
+					onPlay={onPlay}
+					onPause={onPlay}
 				/>
 			</div>
 			<input
