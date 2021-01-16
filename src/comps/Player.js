@@ -41,7 +41,7 @@ export default function Player() {
 					<TextEditor lang={lang} currentText={text} onPlay={onPlay} />
 				</div>
 				<div style={{ paddingTop: "5%" }}>
-					<Mp3Player />
+					<Mp3Player onPlay={() => setOnPlay(!onPlay)} />
 				</div>
 			</div>
 		</>
