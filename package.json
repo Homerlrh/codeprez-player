@@ -1,12 +1,8 @@
 {
-  "name": "codeprez",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@monaco-editor/react": "^3.8.3",
+  "@monaco-editor/react": "^3.8.3",
   "name": "codeprez-player",
   "version": "0.1.0",
-  "private": true,
+  "private": "true",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
