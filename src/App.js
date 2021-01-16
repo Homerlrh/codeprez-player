@@ -1,12 +1,16 @@
 import "./App.css";
 
 import Player from "./comps/Player";
+import { ContentProvider } from "./context/Provider";
 
 function App() {
 	return (
-		<div className="App">
+  <ContentProvider>
+    <div className="App">
 			<Player />
 		</div>
+  </ContentProvider>
+		
 	);
 }
 
