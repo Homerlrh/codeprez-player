@@ -1,5 +1,4 @@
 import "./App.css";
-import Mp3Player from "./comp/Mp3Player";
 
 function App() {
 	return (

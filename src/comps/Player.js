@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from "react";
 import TextEditor from "./TextEditor";
 import { ContentContext } from "../context/Provider";
+import Mp3Player from "./Mp3Player";
 
 import db from "./db/example.json";
 
@@ -37,6 +38,9 @@ export default function Player() {
   })
 
   return(
-    <TextEditor currentText={text} onPlay={onPlay}/>
+    <>
+      <Mp3Player />
+      <TextEditor currentText={text} onPlay={onPlay}/>
+    </>
   )
 }
