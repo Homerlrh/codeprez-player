@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/fontawesome-free-solid";
+
 export default function Mp3Player({ onPlay }) {
 	const hiddenInput = useRef();
 
@@ -31,7 +32,7 @@ export default function Mp3Player({ onPlay }) {
 				hidden
 			/>
 			<div
-				className="uploadBtn"
+				className="uploadBtn center"
 				onClick={() => {
 					hiddenInput.current.click();
 				}}

@@ -21,7 +21,10 @@ export default function Player() {
 		return currentContent;
   };
   
-	debugger;
+  const handleOnPlay = () => {
+    setOnPlay(!onPlay);
+  }
+
 	useEffect(() => {
 		if (onPlay) {
 			const interval = setInterval(() => {
@@ -37,11 +40,10 @@ export default function Player() {
 		<>
 			<div className="App-header">
 				<div style={{ width: "50%", marginRight: "5%" }}>
-					<button onClick={() => setOnPlay(!onPlay)}>Toggle Play</button>
 					<TextEditor lang={lang} currentText={text} onPlay={onPlay} />
 				</div>
 				<div style={{ paddingTop: "5%" }}>
-					<Mp3Player onPlay={() => setOnPlay(!onPlay)} />
+					<Mp3Player onPlay={handleOnPlay} />
 				</div>
 			</div>
 		</>
