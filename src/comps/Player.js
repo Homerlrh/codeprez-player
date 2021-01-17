@@ -74,58 +74,81 @@ export default function Player({ content, audio }) {
 	};
 
 	return (
-		<div className="App-header">
-			<Header>
-				<Button onClick={toggleTheme}>
-					<FontAwesomeIcon
-						icon={theme === "vs-dark" ? faMoon : faSun}
-						size="2x"
-					/>
-				</Button>
-				<Button onClick={handleSaveChange}>
-					<FontAwesomeIcon icon={faSave} size="2x" />
-				</Button>
-				<div style={{ paddingTop: "5%" }}>
-					<Mp3Player
-						onPlay={handleOnPlay}
-						setDuration={setDuration}
-						audio={audio}
-					/>
-				</div>
+		<Container >
+      <Header >
+        <ButtonGroup>
+          <Button onClick={toggleTheme}>
+          <FontAwesomeIcon icon={theme==="vs-dark"? faMoon:faSun} size="2x" />
+          </Button>
+          <Button onClick={handleSaveChange}> 
+            <FontAwesomeIcon icon={faSave} size="2x" />
+          </Button>
+        </ButtonGroup>
+       
+        <Mp3Player onPlay={handleOnPlay}
+            setDuration={setDuration} 
+            audio={audio}/>
 			</Header>
-			<div style={{ width: "80%", border: "1px solid #fff" }}>
-				<MonacoEditor
-					height="90vh"
-					width="100%"
-					language={lang}
-					value={customizedText}
-					onChange={handleOnChange}
-					editorDidMount={handleEditorDidMount}
-					theme={theme}
-					//options={ {selectOnLineNumbers: true , minimap: { enable: false} }}
-				/>
-			</div>
-		</div>
+      <EditorContainer>
+        <MonacoEditor
+          height={100 + '%'}
+          width={100 + '%'}
+          language={lang}
+          value={customizedText}
+          onChange={handleOnChange}
+          editorDidMount={handleEditorDidMount}
+          theme={theme}
+          //options={ {selectOnLineNumbers: true , minimap: { enable: false} }}
+			  />
+      </EditorContainer>
+		</Container>
 	);
 }
 
+const Container = styled.div`
+  width:80%;
+  height:100%;
+  box-sizing: border-box;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1rem;
+  color: white;
+  padding: 50px 80px;
+`
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction:row;
+  gap:5px;
+`
 const Header = styled.div`
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-start;
-	margin-bottom: 10px;
+  width: 100%;
+  height: 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin:10px;
 `;
 
 const Button = styled.button`
-	background-color: #fff;
-	width: 40px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	margin: 5px;
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: #fff;
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  margin:5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
+
+const EditorContainer = styled.div`
+  display:flex;
+  width:100%;
+  height:100%;
+  margin-top:0;
+  border:"1px solid #fff";
+`

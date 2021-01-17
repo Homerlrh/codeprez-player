@@ -3,6 +3,11 @@
   pointer-events: none;
 }
 
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
 .center {
   text-align: center;
 }
