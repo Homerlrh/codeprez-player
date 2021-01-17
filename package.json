@@ -1,7 +1,11 @@
 {
   "name": "codeprez-player",
   "version": "0.1.0",
-  "private": "true",
+  "private": "false",
+  "babel": {
+  "presets": [
+    "@babel/preset-react"
+  ]},
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
@@ -23,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
