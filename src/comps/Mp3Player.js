@@ -3,13 +3,13 @@ import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/fontawesome-free-solid";
 
-export default function Mp3Player({ onPlay, setDuration, handleDrag }) {
+export default function Mp3Player({ onPlay, setDuration, audio }) {
 	const hiddenInput = useRef();
 
-	const [audio, setAudio] = useState(null);
-	const handleAudioUpload = (e) => {
-		setAudio(URL.createObjectURL(e.target.files[0]));
-	};
+	// const [audio, setAudio] = useState(null);
+	// const handleAudioUpload = (e) => {
+	// 	setAudio(URL.createObjectURL(e.target.files[0]));
+	// };
 
 	return (
 		<>
@@ -27,13 +27,13 @@ export default function Mp3Player({ onPlay, setDuration, handleDrag }) {
 					}}
 				/>
 			</div>
-			<input
+			{/* <input
 				ref={hiddenInput}
 				type="file"
 				onChange={handleAudioUpload}
 				hidden
-			/>
-			<div
+			/> */}
+			{/* <div
 				className="uploadBtn center"
 				onClick={() => {
 					hiddenInput.current.click();
@@ -41,7 +41,7 @@ export default function Mp3Player({ onPlay, setDuration, handleDrag }) {
 			>
 				<FontAwesomeIcon icon={faCloudUploadAlt} size="2x" />
 				<p>Upload Files here</p>
-			</div>
+			</div> */}
 		</>
 	);
 }
