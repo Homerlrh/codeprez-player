@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import fs from "fs";
+import Axios from "axios"; // Import Axios or use Fetch.
+
+import Player from "./comps/Player";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	//let content;
+	//const [isLoading, setIsLoading] = useState(true);
+	const [content, setContent] = useState(null);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			Axios("../db/CodePrez.cdpz").then((res) => {
+				setContent(res.data);
+				console.log(res.data);
+			});
+		};
+		fetchData();
+	}, []);
+
+	return (
+		<div className="App">
+			{content && <Player content={content} audio="../db/CodePrez.weba" />}
+		</div>
+	);
+
 }
 
 export default App;
