@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import ReactPlayer from "react-player";
 
 export default function Mp3Player({ onPlay, setDuration, audio }) {
