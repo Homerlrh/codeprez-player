@@ -3,10 +3,8 @@ import TextEditor from "./TextEditor";
 import { ContentContext } from "../context/Provider";
 import Mp3Player from "./Mp3Player";
 
-//const data = require("../db/example.json");
-
 export default function Player() {
-	//mock data
+  //mock data
 	const content = useContext(ContentContext);
 	const snapshots = content.snapshots;
 	const lang = content.lang;
@@ -25,15 +23,17 @@ export default function Player() {
   const handleOnPlay = () => {
     setOnPlay(!onPlay);
   }
-
+  
 	useEffect(() => {
 		if (onPlay) {
 			const interval = setInterval(() => {
-				const currentContent = handleTextParse(snapshots, timestamp + 1000);
-				if (currentContent && currentContent.text.length > 0)
-					setText(currentContent.text);
+        const currentContent = handleTextParse(snapshots, timestamp + 1000);
+        console.log(currentContent);
+				if (currentContent && currentContent.text.length > 0) {
+          setText(currentContent.text);
+        }
 				setTimestamp(timestamp + 1000);
-			}, 1000);
+			}, 800);
 			return () => clearInterval(interval);
 		}
 	});

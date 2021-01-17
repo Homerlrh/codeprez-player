@@ -8,7 +8,7 @@ function App() {
   //debugger
 	return (
     //<ContentProvider>
-        <div className="App">
+        <div>
           <Player />
         </div>
     //</ContentProvider>

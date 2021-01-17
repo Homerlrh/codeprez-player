@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/fontawesome-free-solid";
-export default function Mp3Player({ onPlay, setDuration }) {
+
+export default function Mp3Player({ onPlay, setDuration, handleDrag }) {
 	const hiddenInput = useRef();
 
 	const [audio, setAudio] = useState(null);

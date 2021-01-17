@@ -16,10 +16,10 @@ export default function TextEditor({ currentText, lang, onPlay }) {
   };
 
 	useEffect(() => {
-		if (onPlay) { 
+		//if (onPlay) { 
       setText(currentText);
       setCustomizedText(currentText);
-    }
+    //}
   }, [currentText]);
 
   
@@ -40,7 +40,6 @@ export default function TextEditor({ currentText, lang, onPlay }) {
   }
 
 	const handleSaveChange = () => {
-    
     const type = {type:`text/${lang}`||"text/javascript"};
     const blob = new Blob([customizedText], type);
     const url = URL.createObjectURL(blob);
@@ -55,7 +54,6 @@ export default function TextEditor({ currentText, lang, onPlay }) {
       <Menu >
         <Button onClick={toggleTheme}>
           <FontAwesomeIcon icon={theme==="vs-dark"? faMoon:faSun} size="2x" />
-          
         </Button>
         <Button onClick={handleSaveChange}> 
            <FontAwesomeIcon icon={faSave} size="2x" />
