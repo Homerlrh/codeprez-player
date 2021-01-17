@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import {ControlledEditor as MonacoEditor} from "@monaco-editor/react"
+import { ControlledEditor as MonacoEditor } from "@monaco-editor/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun, faSave } from "@fortawesome/fontawesome-free-solid";
 import styled from "styled-components";
@@ -8,67 +8,71 @@ import saveFile from "../helper/saveFile";
 
 import Mp3Player from "./Mp3Player";
 
-export default function Player({ content, audio}) {
-  const snapshots = content.snapshots;
-  const lang = content.lang;
-  const [theme, setTheme] = useState("vs-dark")
-  const [text, setText] = useState(content.text);
-  const [customizedText, setCustomizedText] = useState(text);
+export default function Player({ content, audio }) {
+	const snapshots = content.snapshots;
+	const lang = content.lang;
+	const [theme, setTheme] = useState("vs-dark");
+	const [text, setText] = useState(content.text);
+	const [customizedText, setCustomizedText] = useState(text);
 	const [currentPlayTime, setCurrentPlayTime] = useState(0);
 	const [onPlay, setOnPlay] = useState(false);
 	const [currentDuration, setDuration] = useState(0);
 
 	const getCurrentSnapshot = (snapshots, timestamp) => {
-		const currentSnapshot = snapshots.filter(
-			(element) => parseInt(element.timestamp) === timestamp
-		);
-		return currentSnapshot[0].text;
-  };
-  
-  const handleOnPlay = () => {
-    setOnPlay(!onPlay);
-  }
-  
-	const toggleTheme = () => {
-    setTheme(theme === "vs-dark"? "light":"vs-dark");
-  }
-
-  const handleSaveChange = () => {
-    saveFile(customizedText, lang);
-  }
-	const changeTimeInterval = () => {
-		const durationInMS = Math.floor(currentDuration * 1000);
-		console.log(durationInMS);
+		const currentContent = snapshots.filter(
+			(element) => element.timestamp === timestamp
+		)[0];
+		return currentContent;
 	};
 
-  const handleEditorDidMount = (editor, monaco) => {
-    console.log("editorDidMount", editor);
-  };
+	const handleOnPlay = () => {
+		setOnPlay(!onPlay);
+	};
 
-  useEffect(() => {
-		if (onPlay) {
-			const interval = setInterval(() => {
-        setCurrentPlayTime(currentPlayTime + 1);
-        const currentText = getCurrentSnapshot(snapshots, currentPlayTime);
-        setText(currentText);
-        setCustomizedText(currentText);
-      }, 800);
-			return () => clearInterval(interval);
-		}
-	},[onPlay]);
+	const toggleTheme = () => {
+		setTheme(theme === "vs-dark" ? "light" : "vs-dark");
+	};
 
-  //set onPlay to true will erase user changes
-  useEffect(() => {
-		if (onPlay) { 
-      setCustomizedText(text);
-    }
-	}, [onPlay]);
+	const handleSaveChange = () => {
+		saveFile(customizedText, lang);
+	};
 
-  const handleOnChange = (evt, newValue) => {
-    debugger  
-    setCustomizedText(newValue);
-  }
-	
+	const handleEditorDidMount = (editor, monaco) => {
+		console.log("editorDidMount", editor);
+	};
+
+	// useEffect(() => {
+	// 	if (onPlay) {
+	// 		const interval = setInterval(() => {
+	// 			setCurrentPlayTime(currentPlayTime + 1);
+	// 			const currentText = getCurrentSnapshot(snapshots, currentPlayTime);
+	// 			setText(currentText);
+	// 			setCustomizedText(currentText);
+	// 		}, 800);
+	// 		return () => clearInterval(interval);
+	// 	}
+	// }, [onPlay]);
+
+	//set onPlay to true will erase user changes
+	// useEffect(() => {
+	// 	if (onPlay) {
+	// 		setCustomizedText(text);
+	// 	}
+	// }, [onPlay]);
+
+	useEffect(() => {
+		const currentSec = Math.floor(currentDuration);
+		const currentText = getCurrentSnapshot(snapshots, currentSec);
+		setText(currentText.text);
+		setCustomizedText(currentText.text);
+		console.log(text);
+	}, [currentDuration]);
+
+	const handleOnChange = (evt, newValue) => {
+		debugger;
+		setCustomizedText(newValue);
+	};
+
 	return (
 		<Container >
       <Header >
