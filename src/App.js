@@ -6,21 +6,20 @@ import Axios from "axios"; // Import Axios or use Fetch.
 import Player from "./comps/Player";
 
 function App() {
-  //let content; 
-  //const [isLoading, setIsLoading] = useState(true);
+  
   const [content, setContent] = useState(null);
   
   useEffect(()=> {
     const fetchData = async () => {
       Axios("./db/CodePrez.cdpz").then(res => {
       setContent(res.data);
-      console.log(res.data);
+      console.log(res.data)
     })};
     fetchData();
   },[])
 
 	return (
-   <div>
+   <div className="App">
       {content && <Player content={content} audio="./db/CodePrez.weba"/>}
     </div>
   );
