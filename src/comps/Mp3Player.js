@@ -2,11 +2,10 @@ import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudUploadAlt } from "@fortawesome/fontawesome-free-solid";
-export default function Mp3Player({ onPlay }) {
+export default function Mp3Player({ onPlay, setDuration }) {
 	const hiddenInput = useRef();
 
 	const [audio, setAudio] = useState(null);
-
 	const handleAudioUpload = (e) => {
 		setAudio(URL.createObjectURL(e.target.files[0]));
 	};
@@ -22,6 +21,9 @@ export default function Mp3Player({ onPlay }) {
 					width="500px"
 					onPlay={onPlay}
 					onPause={onPlay}
+					onProgress={(e) => {
+						setDuration(e.playedSeconds);
+					}}
 				/>
 			</div>
 			<input
