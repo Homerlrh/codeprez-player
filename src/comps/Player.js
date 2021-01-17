@@ -20,7 +20,11 @@ export default function Player() {
 			(element) => element.timestamp === timestamp
 		)[0];
 		return currentContent;
-	};
+  };
+  
+  const handleOnPlay = () => {
+    setOnPlay(!onPlay);
+  }
 
 	// useEffect(() => {
 	// 	if (onPlay) {
@@ -47,14 +51,11 @@ export default function Player() {
 		<>
 			<div className="App-header">
 				<div style={{ width: "50%", marginRight: "5%" }}>
-					<button onClick={() => setOnPlay(!onPlay)}>Toggle Play</button>
 					<TextEditor lang={lang} currentText={text} onPlay={onPlay} />
 				</div>
 				<div style={{ paddingTop: "5%" }}>
-					<Mp3Player
-						onPlay={() => setOnPlay(!onPlay)}
-						setDuration={setDuration}
-					/>
+          <Mp3Player onPlay={handleOnPlay}
+            setDuration={setDuration} />
 				</div>
 			</div>
 		</>

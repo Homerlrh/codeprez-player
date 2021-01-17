@@ -43,7 +43,7 @@ export default function Mp3Player({ onPlay, setDuration }) {
 				max="2"
 			/>
 			<div
-				className="uploadBtn"
+				className="uploadBtn center"
 				onClick={() => {
 					hiddenInput.current.click();
 				}}
