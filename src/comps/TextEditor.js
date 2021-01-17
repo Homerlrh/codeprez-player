@@ -6,7 +6,8 @@ export default function TextEditor({ currentText, lang, onPlay, onEditing }) {
 	const [isEditorReady, setIsEditorReady] = useState(false);
 
 	useEffect(() => {
-		if (onPlay) setText(currentText);
+		//if (onPlay) setText(currentText);
+		setText(currentText);
 	}, [currentText]);
 
 	function handleEditorDidMount() {

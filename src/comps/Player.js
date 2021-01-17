@@ -17,31 +17,34 @@ export default function Player() {
 
 	const handleTextParse = (snapshots, timestamp) => {
 		const currentContent = snapshots.filter(
-			(element) => parseInt(element.timestamp) === timestamp
+			(element) => element.timestamp === timestamp
 		)[0];
 		return currentContent;
 	};
 
-	useEffect(() => {
-		if (onPlay) {
-			const interval = setInterval(() => {
-				const currentContent = handleTextParse(snapshots, timestamp + 1000);
-				if (currentContent && currentContent.text.length > 0)
-					setText(currentContent.text);
-				setTimestamp(timestamp + 1000);
-			}, 1000);
-			return () => clearInterval(interval);
-		}
-	});
+	// useEffect(() => {
+	// 	if (onPlay) {
+	// 		const interval = setInterval(() => {
+	// 			const currentContent = handleTextParse(snapshots, timestamp + 1);
+	// 			if (currentContent && currentContent.text.length > 0)
+	// 				setText(currentContent.text);
+	// 			setTimestamp(timestamp + 1);
+	// 		}, 500);
+	// 		return () => clearInterval(interval);
+	// 	}
+	// });
 
-	const changeTimeInterval = () => {
-		const durationInMS = Math.floor(currentDuration * 1000);
-		console.log(durationInMS);
-	};
+	useEffect(() => {
+		const currentSec = Math.floor(currentDuration);
+		const currentContent = handleTextParse(snapshots, currentSec + 1);
+		// if (currentContent && currentContent.text.length > 0)
+		// 	setText(currentContent.text);
+		setText(currentContent.text);
+		console.log(text);
+	}, [currentDuration]);
 
 	return (
 		<>
-			<button onClick={changeTimeInterval}>Check</button>
 			<div className="App-header">
 				<div style={{ width: "50%", marginRight: "5%" }}>
 					<button onClick={() => setOnPlay(!onPlay)}>Toggle Play</button>

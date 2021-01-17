@@ -1,0 +1,19 @@
+{  "extension" : "text/javascript",
+    "frameRate":1000,
+    "snapshots":[
+        {"text":"","timestamp":0,"hash":0},
+        {"text":"","timestamp":1,"hash":0},
+        {"text":"hel","timestamp":2,"hash":103183},
+        {"text":"hello ","timestamp":3,"hash":-1220935282},
+        {"text":"hello world ","timestamp":4,"hash":-217287204},
+        {"text":"hello world \n","timestamp":5,"hash":1854031278},
+        {"text":"hello world \nlet","timestamp":6,"hash":166483373},
+        {"text":"hello world \nlets ","timestamp":7,"hash":1076735098},
+        {"text":"hello world \nlets see ","timestamp":8,"hash":-530272857},
+        {"text":"hello world \nlets see how thi","timestamp":9,"hash":-673042146},
+        {"text":"hello world \nlets see how thi","timestamp":10,"hash":-673042146},
+        {"text":"hello world \nlets see how this is wo","timestamp":11,"hash":735843523},
+        {"text":"hello world \nlets see how this is working!","timestamp":12,"hash":-411441989},
+        {"text":"hello world \nlets see how this is working!!","timestamp":13,"hash":130200262}
+    ]
+}
