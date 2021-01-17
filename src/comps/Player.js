@@ -18,11 +18,19 @@ export default function Player({ content, audio}) {
 	const [onPlay, setOnPlay] = useState(false);
 	const [currentDuration, setDuration] = useState(0);
 
+<<<<<<< HEAD
 	const getCurrentSnapshot = (snapshots, timestamp) => {
 		const currentSnapshot = snapshots.filter(
 			(element) => parseInt(element.timestamp) === timestamp
 		);
 		return currentSnapshot[0].text;
+=======
+	const handleTextParse = (snapshots, timestamp) => {
+		const currentContent = snapshots.filter(
+			(element) => element.timestamp === timestamp
+		)[0];
+		return currentContent;
+>>>>>>> 6fdb9d32288b2d79817a94593835aebdff7cb221
   };
   
   const handleOnPlay = () => {
@@ -41,6 +49,7 @@ export default function Player({ content, audio}) {
 		console.log(durationInMS);
 	};
 
+<<<<<<< HEAD
   const handleEditorDidMount = (editor, monaco) => {
     console.log("editorDidMount", editor);
   };
@@ -63,6 +72,28 @@ export default function Player({ content, audio}) {
       setCustomizedText(text);
     }
 	}, [onPlay]);
+=======
+	// useEffect(() => {
+	// 	if (onPlay) {
+	// 		const interval = setInterval(() => {
+	// 			const currentContent = handleTextParse(snapshots, timestamp + 1);
+	// 			if (currentContent && currentContent.text.length > 0)
+	// 				setText(currentContent.text);
+	// 			setTimestamp(timestamp + 1);
+	// 		}, 500);
+	// 		return () => clearInterval(interval);
+	// 	}
+	// });
+
+	useEffect(() => {
+		const currentSec = Math.floor(currentDuration);
+		const currentContent = handleTextParse(snapshots, currentSec + 1);
+		// if (currentContent && currentContent.text.length > 0)
+		// 	setText(currentContent.text);
+		setText(currentContent.text);
+		console.log(text);
+	}, [currentDuration]);
+>>>>>>> 6fdb9d32288b2d79817a94593835aebdff7cb221
 
   const handleOnChange = (evt, newValue) => {
     debugger  
@@ -70,6 +101,7 @@ export default function Player({ content, audio}) {
   }
 	
 	return (
+<<<<<<< HEAD
 		<div className="App-header">
       <Header >
        <Button onClick={toggleTheme}>
@@ -79,6 +111,14 @@ export default function Player({ content, audio}) {
            <FontAwesomeIcon icon={faSave} size="2x" />
         </Button>
         <div style={{ paddingTop: "5%" }}>
+=======
+		<>
+			<div className="App-header">
+				<div style={{ width: "50%", marginRight: "5%" }}>
+					<TextEditor lang={lang} currentText={text} onPlay={onPlay} />
+				</div>
+				<div style={{ paddingTop: "5%" }}>
+>>>>>>> 6fdb9d32288b2d79817a94593835aebdff7cb221
           <Mp3Player onPlay={handleOnPlay}
             setDuration={setDuration} />
 				</div>
