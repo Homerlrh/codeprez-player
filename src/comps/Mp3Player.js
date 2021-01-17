@@ -7,7 +7,15 @@ export default function Mp3Player({ onPlay, setDuration }) {
 
 	const [audio, setAudio] = useState(null);
 	const handleAudioUpload = (e) => {
-		setAudio(URL.createObjectURL(e.target.files[0]));
+		const numOfFiles = e.target.files["length"];
+		for (let i = 0; i <= numOfFiles - 1; i++) {
+			const fileType = e.target.files[i].type;
+			if (fileType.includes("audio")) {
+				setAudio(URL.createObjectURL(e.target.files[i]));
+			} else {
+				console.log(e.target.files[i]);
+			}
+		}
 	};
 
 	return (
@@ -31,6 +39,8 @@ export default function Mp3Player({ onPlay, setDuration }) {
 				type="file"
 				onChange={handleAudioUpload}
 				hidden
+				multiple
+				max="2"
 			/>
 			<div
 				className="uploadBtn center"

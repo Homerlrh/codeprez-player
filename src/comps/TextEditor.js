@@ -16,11 +16,9 @@ export default function TextEditor({ currentText, lang, onPlay }) {
   };
 
 	useEffect(() => {
-		if (onPlay) { 
-      setText(currentText);
-      setCustomizedText(currentText);
-    }
-  }, [currentText]);
+		//if (onPlay) setText(currentText);
+		setText(currentText);
+	}, [currentText]);
 
   
   //set onPlay to true will erase user changes
