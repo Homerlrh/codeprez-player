@@ -22,7 +22,7 @@ function App() {
 	}, []);
 
 	return (
-		<div>
+		<div className="App">
 			{content && <Player content={content} audio="../db/CodePrez.weba" />}
 		</div>
 	);
